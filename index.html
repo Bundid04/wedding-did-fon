@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f9f0f5;
+            background-color: #CD853F;
             color: #333;
             margin: 0;
             padding: 0;
@@ -16,11 +16,22 @@
         .navbar {
             background-color: #d63384;
             padding: 15px;
-            text-align: center;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar .logo {
+            margin-left: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            margin-right: 20px;
         }
         .navbar a {
             color: white;
@@ -69,16 +80,19 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#invitation">รายละเอียดงาน</a>
-        <a href="#image">ภาพของเรา</a>
-        <a href="#map">แผนที่</a>
+        <div class="logo">งานแต่งของเรา</div>
+        <div class="menu">
+            <a href="#invitation">รายละเอียดงาน</a>
+            <a href="#image">ภาพของเรา</a>
+            <a href="#map">แผนที่</a>
+        </div>
     </div>
     
     <div class="container">
         <h1>เชิญร่วมงานแต่งงานของเรา</h1>
         <p>เราขอเชิญคุณมาร่วมเป็นส่วนหนึ่งของวันสำคัญของเรา</p>
         <div class="invitation" id="invitation">
-            <h2>รายละเอียดงาน</h2>
+             <h2>รายละเอียดงาน</h2>
             <p>วันที่: 3 พฤษภาคม 2025</p>
             <p>สถานที่: โรงเรียนเตรียมอุดมศึกษาพัฒนาการเขลางค์นคร จ.ลำปาง</p>
             <p>เวลา: 15:00 น.</p>
@@ -103,7 +117,7 @@
     
     <script>
         function updateCountdown() {
-              const weddingDate = new Date("2025-05-03T15:00:00").getTime();
+             const weddingDate = new Date("2025-05-03T15:00:00").getTime();
             const now = new Date().getTime();
             const timeLeft = weddingDate - now;
             

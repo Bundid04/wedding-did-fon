@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>งานแต่งของเรา</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f0f5;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .invitation {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .countdown {
+            font-size: 24px;
+            color: #d63384;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>เชิญร่วมงานแต่งงานของเรา</h1>
+        <p>เราขอเชิญคุณมาร่วมเป็นส่วนหนึ่งของวันสำคัญของเรา</p>
+        <div class="invitation">
+            <h2>รายละเอียดงาน</h2>
+            <p>วันที่: 14 กุมภาพันธ์ 2025</p>
+            <p>สถานที่: โรงแรมหรูใจกลางเมือง</p>
+            <p>เวลา: 18:00 น.</p>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </div>
+    
+    <script>
+        function updateCountdown() {
+            const weddingDate = new Date("2025-02-14T18:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = 
+                `เหลืออีก ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

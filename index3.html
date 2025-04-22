@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>งานแต่งของเรา</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background: #fef6f9;
+      color: #444;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: #ffe4ec;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map iframe {
+      width: 90%;
+      height: 300px;
+      border: 0;
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>พิธีแต่งงานของ บีม & มิ้นท์</h1>
+    <p>วันที่ 14 กุมภาพันธ์ 2026</p>
+  </header>
+
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img1.jpg" alt="รูปที่ 1" /></div>
+      <div class="swiper-slide"><img src="img2.jpg" alt="รูปที่ 2" /></div>
+      <div class="swiper-slide"><img src="img3.jpg" alt="รูปที่ 3" /></div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="content">
+    <h2>รายละเอียดงาน</h2>
+    <p>ณ โรงแรม ABC กรุงเทพฯ</p>
+    <p>เริ่มพิธีเวลา 09:00 น. / งานเลี้ยง 18:00 น.</p>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?...เปลี่ยนลิงก์ตรงนี้..."
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    });
+  </script>
+
+</body>
+</html>

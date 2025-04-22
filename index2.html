@@ -19,6 +19,27 @@
         <link rel='dns-prefetch' href='//2.gravatar.com'/>
         <link rel='preconnect' href='//i0.wp.com'/>
         <link rel='preconnect' href='//c0.wp.com'/>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <style>
+        .swiper {
+        width: 100%;
+        max-width: 600px;
+        height: 350px;
+        margin: 30px auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    </style>
         <!-- <link rel="alternate" type="application/rss+xml" title="Lecubeofficial &raquo; Feed" href="https://event.lecubeofficial.com/feed/"/> -->
         <!-- <link rel="alternate" type="application/rss+xml" title="Lecubeofficial &raquo; Comments Feed" href="https://event.lecubeofficial.com/comments/feed/"/> -->
         <script>
@@ -2182,5 +2203,25 @@
             });
         </script>
         <script type='text/javascript' src='https://event.lecubeofficial.com/wp-content/plugins/qi-addons-for-elementor/inc/plugins/elementor/assets/js/elementor.js?m=1738856326'></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            }
+            });
+        </script>
     </body>
 </html>
